@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 import routes from './routes';
 import configureStore from './store/configureStore';
@@ -24,11 +24,11 @@ const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
 function logPageView() {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
+  // ReactGA.set({ page: window.location.pathname });
+  // ReactGA.pageview(window.location.pathname);
 }
 
-ReactGA.initialize('UA-82047208-2');
+// ReactGA.initialize('UA-82047208-2');
 
 render(
   <Provider store={store}>
